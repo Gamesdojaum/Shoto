@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(./icons-imagens/fundoazul.jpg);
+    background-size: 200%;
+    background-color: #474747;
+    overflow-y: scroll;
+}
+
+#logo{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+    text-shadow: 1px 1px 15px blue;
+    position: absolute;
+    font-weight: bold;
+    left: 55px;
+    top: 10px;
+    font-size: 30px;
+    cursor: default;
+}
+
+#contato li{
+    color: rgb(13, 37, 255);
+    border-bottom: 4px solid rgb(255, 255, 255);
+    padding: 15px;
+    letter-spacing: 2px;
+    list-style: none;
+    opacity: 100%;
+    transition-duration: 1s;
+}
+
+#contato li:hover{
+    color: rgb(70, 82, 248);
+}
+
+nav {
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    height: 53px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li{
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    letter-spacing: 2px;
+    list-style: none;
+    opacity: 60%;
+    transition-duration: 1s;
+}
+
+nav ul li:hover {
+    color: white;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    opacity: 100%;
+    transition-duration: 100ms;
+}
+
+nav ul a{
+    text-decoration: none;
+}
+
+.socialmedia {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.socialmedia a {
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    display: inline-flex;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    color: blue;
+    margin: 0 20px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+    font-size: 60px;
+    box-shadow: 1px 1px 20px blue;
+    animation-name: mediasocial;
+    animation-duration: 1s;
+}
+
+.socialmedia a:hover{
+    transform: scale(1.20) rotate(3deg);
+    font-size: 65px;
+    color: white;
+    box-shadow: 1px 1px 10px white;
+}
+
+@keyframes mediasocial {
+    0%{margin-top: -500px; opacity: 0%;}
+    40%{opacity: 0%;}
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    border-top  : 1px solid white;
+    height: 100px;
+    width: 100%;
+}
+
+footer h1{
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+}
+
+footer #logo-name{
+    padding-top: 0;
+    color: blue;
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+    body{
+        background-repeat: no-repeat;
+        background-size: 500%;
+    }
+
+    nav #logo{
+    opacity: 100%;
+    cursor: none;
+    top: 0px;
+    left: auto;
+    right: auto;
+    align-items: center;
+    font-size: 40px;
+    }
+    nav ul{
+        margin-top: 50px;
+        width: cover;
+    }
+    nav ul li{
+        background-color: black;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .socialmedia{
+        margin-top: 100px;
+    }
+    footer h1{
+        font-size: 25px;
+    }
+}

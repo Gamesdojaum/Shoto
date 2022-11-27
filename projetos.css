@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: black;
+}
+
+body{
+    background-image: url(./icons-imagens/fundoazul.jpg);
+    background-size: 400%;
+    background-color: #474747;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+#logo{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+    text-shadow: 1px 1px 15px blue;
+    position: absolute;
+    font-weight: bold;
+    left: 55px;
+    top: 10px;
+    font-size: 30px;
+    cursor: default;
+}
+
+#projetos li{
+    color: rgb(13, 37, 255);
+    border-bottom: 4px solid rgb(255, 255, 255);
+    padding: 15px;
+    letter-spacing: 2px;
+    list-style: none;
+    opacity: 100%;
+    transition-duration: 1s;
+}
+
+#projetos li:hover{
+    color: rgb(70, 82, 248);
+}
+
+nav {
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    height: 53px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li{
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    letter-spacing: 2px;
+    list-style: none;
+    opacity: 60%;
+    transition-duration: 1s;
+}
+
+nav ul li:hover {
+    color: white;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    opacity: 100%;
+    transition-duration: 100ms;
+}
+
+nav ul a{
+    text-decoration: none;
+}
+
+#hello{
+    cursor: default;
+    font-size: 40px;
+    color: red;
+    display: flex;
+    text-shadow: 1px 5px 10px rgb(0, 0, 0);
+    animation-name: hello;
+    animation: hello 7s infinite;
+}
+
+@keyframes hello {
+  10%{color: red;}
+  50%{color: green;}
+  70%{color: blue;}
+  100%{color: red;}
+}
+
+#titulo{
+    cursor: default;
+    color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 10px 5px 10px black;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 50px;
+    text-shadow: 1px 1px 20px black;
+    animation-name: projetos;
+    animation-duration: 2s;
+
+}
+
+@keyframes projetos {
+    0%{margin-top: -50px; opacity: 0%;}
+    40%{opacity: 5%;}
+    50%{opacity: 20%}
+    60%{opacity: 50%}
+    100%{opacity: 100%;}
+}
+
+.helloworld{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 100px;
+    width: 300px;
+    height: 50px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  25%{transform:translateX(-30px);}
+  50%{transform:translateX(0px);}
+  75%{transform:translateX(30px);}
+  100%{transform:translateX(0px);}
+}
+
+#mao{
+    display: flex;
+    cursor: default;
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+    animation-name: maozinha;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+  }
+  
+  @keyframes maozinha{
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4.0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+       transform: rotate(0deg);
+    }
+    100% {
+       transform: rotate(0deg);
+    }
+  }
+  
+  #endeavor{
+    color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 132, 255);
+    text-shadow: 10px 5px 10px black;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 50px;
+    cursor: default;
+    animation-name: endeavor;
+    animation-duration: 3s;
+}
+
+@keyframes endeavor {
+    0%{margin-top: 50px;opacity: 0%;}
+    
+}
+
+  #site2 {
+    display: flex;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    height: 350px;
+    border: 5px solid blue;
+    border-radius: 50px;
+    transition-duration: 1s;
+}
+
+  #site2:hover{
+    box-shadow: 10px 10px 10px black;
+    border: 5px solid white;
+  }
+
+  #login{
+    color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 132, 255);
+    text-shadow: 10px 5px 10px black;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 30px;
+    cursor: default;
+    animation-name: login;
+    animation-duration: 3s;
+  }
+
+  @keyframes login {
+    0%{margin-top: 50px;opacity: 0%;}
+    
+}
+
+  #sitelogin{
+    display: flex;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    height: 350px;
+    border: 5px solid blue;
+    border-radius: 50px;
+    transition-duration: 1s;
+  }
+
+  #sitelogin:hover{
+    box-shadow: 10px 10px 10px black;
+    border: 5px solid white;
+  }
+
+  #link1{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 650px;
+    height: 350px;
+    transition-duration: 1s;
+    animation-name: link1;
+    animation-duration: 4s;
+  }
+
+@keyframes link1 {
+    0%{opacity: 0%;}
+}
+
+  #link2{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 650px;
+    height: 350px;
+    transition-duration: 1s;
+    animation-name: link2;
+    animation-duration: 3s;
+  }
+
+  @keyframes link2 {
+    0%{padding-top:10px;opacity: 0%;}
+    
+  }
+
+  .voltar{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.voltar button{
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    scroll-behavior: smooth;
+    background-color: black;
+    color: blue;
+    box-shadow: 3px 3px 10px blue;
+    transition-duration: 1s;
+}
+
+.voltar button:hover{
+    color: white;
+    box-shadow: 3px 3px 10px white;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    border-top  : 1px solid white;
+    height: 100px;
+}
+
+footer h1{
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+}
+
+footer #logo-name{
+    padding-top: 0;
+    color: blue;
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+  body{
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  nav #logo{
+  opacity: 100%;
+  cursor: none;
+  top: 0px;
+  left: auto;
+  right: auto;
+  align-items: center;
+  font-size: 40px;
+  }
+  nav ul{
+    margin-top: 50px;
+    width: cover;
+}
+nav ul li{
+    background-color: black;
+    font-size: 18px;
+    padding: 15px;
+}
+
+  .helloworld{
+    margin-top: 50px;
+  }
+
+  #link1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 250px;
+  }
+  #site2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 250px;
+  }
+
+  #link2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 250px;
+  }
+  #sitelogin{
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 250px;
+  }
+  footer h1{
+    font-size: 25px;
+}
+}
