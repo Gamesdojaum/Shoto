@@ -209,12 +209,15 @@ nav ul a{
 }
 
 footer{
+    position: relative;
+    bottom: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: black;
     border-top  : 1px solid white;
     height: 100px;
+    width: 100%;
 }
 
 footer h1{

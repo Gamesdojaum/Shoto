@@ -8,6 +8,7 @@ body{
     background-size: 250%;
     background-color: #474747;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #logo{
@@ -70,12 +71,13 @@ nav ul a{
     text-decoration: none;
 }
 
-.sobreinfo {
+#sobreinfo {
     cursor: default;
     color: rgb(255, 255, 255);
     font-size: 43px;
     font-weight: bold;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 950px;
     height: 300px;
@@ -95,6 +97,16 @@ nav ul a{
 @keyframes sobreinfo {
   0% {margin-top: 250px;opacity: 0%;}
 
+}
+
+#aba{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+#aba:hover{
+    color: white;
 }
 
 .final {
@@ -157,15 +169,7 @@ nav ul a{
 
 }
 
-#aba{
-    font-size: 40px;
-    font-weight: bold;
-    color: black;
-}
 
-#aba:hover{
-    color: white;
-}
 
 .linguagens{
     display: flex;
@@ -243,41 +247,88 @@ footer #logo-name{
 
 @media (min-width: 300px) and (max-width: 800px) {
     body{
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    nav #logo{
-    opacity: 100%;
-    cursor: none;
-    top: 0px;
-    left: auto;
-    right: auto;
-    align-items: center;
-    font-size: 40px;
-    }
-    nav ul{
-        margin-top: 50px;
-        width: cover;
-    }
-    nav ul li{
-        background-color: black;
-        font-size: 15px;
-        padding: 15px;
-    }
+        margin: 0;
+        padding: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: grid;
+      grid-template-areas: 
+      "header header"
+      "main main"
+      "footer footer"
+      ;
+  }
+  
+  nav #logo{
+  opacity: 100%;
+  cursor: none;
+  top: 0px;
+  left: auto;
+  right: auto;
+  align-items: center;
+  font-size: 40px;
+  }
+  header{
+      grid-area: header;
+      background-color: black;
+      height: 100px;
+  }
+  nav ul{
+      box-sizing: border-box;
+      margin-top: 50px;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: black;
+      justify-items: center;
+      height: cover;
+      width: cover;
+  }
+  nav ul li{
+      background-color: black;
+      font-size: 15px;
+      color: white;
+      opacity: 50%;
+  }
+  main{
+      grid-area: main;
+  }
 
     .fundo #titulo{
-        padding-top: 30px;
-        font-size: 25px;
-        margin-top: 80px;
+        padding: 10px 10px;
+        font-size: 21px;
+        justify-content: center;
+        margin-top: 50px;
         width: 75%;
+        height: 20px;
     }
-    .sobreinfo {
-        border-radius: 20px;
+    #sobreinfo {
+        color: white;
+        background-image: linear-gradient(to right, rgb(68, 110, 247), blue, rgb(0, 0, 82));
+        display: flex;
+        margin-top: 10px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 20px 0px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: content-box;
+        font-size: 25px;
+        border-radius: 60px;
+        border: 1px solid white;
         width: 85%;
+        height: 350px;
     }
-    .sobreinfo p, #aba{
-        font-size: 27px;
+    #sobreinfo #aba{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 20px 20px;
+        box-sizing: content-box;
+        font-size: 21px;
     }
     .final{
         width: 85%;
@@ -285,7 +336,18 @@ footer #logo-name{
     .final h2{
         font-size: 25px;
     }
-        footer h1{
-        font-size: 25px;
+    .linguagens{
+        width: 150px;
+        height: 150px;
     }
+    .voltar button{
+        opacity: 50%;
+      }
+        footer{
+          grid-area: footer;
+        }
+        
+        footer h1{
+          font-size: 17px;
+        }
 }
