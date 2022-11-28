@@ -249,6 +249,7 @@ footer #logo-name{
     nav ul li{
         background-color: black;
         font-size: cover;
+        color: red;
         padding: 15px;
     }
 
