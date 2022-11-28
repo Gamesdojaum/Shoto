@@ -244,11 +244,11 @@ footer #logo-name{
     }
     nav ul{
         margin-top: 50px;
-        width: cover;
+        width: auto;
     }
     nav ul li{
         background-color: black;
-        font-size: 10px;
+        font-size: cover;
         padding: 15px;
     }
 
