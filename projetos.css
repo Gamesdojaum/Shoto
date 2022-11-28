@@ -284,9 +284,12 @@ nav ul a{
     position: fixed;
     right: 30px;
     bottom: 30px;
+    z-index: 2;
 }
 
 .voltar button{
+    border-radius: 50px;
+    cursor: pointer;
     height: 50px;
     width: 50px;
     font-size: 40px;

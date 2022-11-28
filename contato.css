@@ -194,9 +194,6 @@ footer #logo-name{
   .socialmedia a{
     margin: 10px 0;
   }
-  .voltar button{
-    opacity: 50%;
-  }
     footer{
       grid-area: footer;
     }
