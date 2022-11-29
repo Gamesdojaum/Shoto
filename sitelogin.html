@@ -41,7 +41,7 @@
 			cursor: default;
 			font-size: 40px;
 			background-color: black;
-			color: red;
+			color: cyan;
 			border-radius: 15px;
 			padding-top: 25px;
 			margin-bottom: 20px;
@@ -49,10 +49,10 @@
 			animation: titulo 5s ease-in-out infinite;
 		}
 		@keyframes titulo {
-			10%{color: red;}
-			50%{color: green;}
-			80%{color: blue;}
-			100%{color: red;}
+			10%{color: cyan;}
+			50%{color: blue;}
+			80%{color: darkblue;}
+			100%{color: cyan;}
 		}
 		.formulario input{
 			display: block;
@@ -65,14 +65,20 @@
 			border: 1px solid black;
 			border-radius: 10px;
 		}
-		.formulario #button{
+		.formulario #send{
 			background-color: black;
 			color: white;
 			border-radius: 25px;
 		}
-		.formulario #button:hover{
+		.formulario #send:hover{
 			color: gray;
 			background-color: rgb(19, 19, 19);
+		}
+
+		@media (min-width: 300px) and (max-width: 800px) {
+			form{
+				margin: 50% auto;
+			}
 		}
 	</style>
 </head>
@@ -80,14 +86,23 @@
 	<form>
 		<div class="formulario">
 		<h1 id="titulo">SHOTO</h1>
-			<input type="text" placeholder="Usuario" id="login">
-			<input type="password" placeholder="Senha" id="senha">
-			<input type="button" id="button" value="ENTRAR" onclick="logar(); return false">
+			<input type="text" placeholder="Usuario" id="login" required>
+			<input type="password" placeholder="Senha" id="senha" required>
+			<input type="button" id="send" value="ENTRAR" onclick="logar(); return false">
 		</div>
 		</form>
 
 
 	<script>
+
+		document.addEventListener("keypress", function(e) {
+			if(e.key === "Enter") {
+			console.log("Enter Pressionado");
+			const btn = document.querySelector("#send");
+			btn.click();
+			}
+		});
+
 
 		function logar(){
 			var login = document.getElementById('login').value;
