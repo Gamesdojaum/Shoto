@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Background</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow-x: hidden;
+            background-image: linear-gradient(to right, cyan, blue, darkblue);
+        }
+        a{
+            text-decoration: none;
+        }
+        .voltar{
+            font-size: 19px;
+            margin: 20px;
+            display: flex;
+            justify-content: start;
+            color: black;
+            text-decoration: none;
+        }
+        .voltar:hover{
+            color: white;
+        }
+        .container1{
+            cursor: default;
+            display: flex;
+            margin: 40px auto;
+            justify-content: center;
+            background-color: black;
+            width: 650px;
+            border: 1px solid white;
+            border-radius: 50px;
+        }
+        .container1 .box1{
+            padding: 20px 10px;
+            color: white;
+            font-size: 25px;
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+        }
+        .container2 #corvermelho, #corverde, #corazul, #cordosite{
+            text-align: center;
+            width: 150px;
+            border: 1px solid white;
+            border-radius: 30px;
+            color: white;
+            margin: 50px 30px;
+            padding: 10px 10px;
+            transition-duration: 0.30s;
+        }
+        .container2 #corvermelho{
+            background-color: red;
+        }
+        .container2 #corverde{
+            background-color: green;
+        }
+        .container2 #corazul {
+            background-color: blue;
+        }
+        .container2 #cordosite{
+            background-image: linear-gradient(to right, cyan, blue, darkblue);
+        }
+        .container2 #corvermelho:hover, #corverde:hover, #corazul:hover, #cordosite:hover{
+            transform: scale(1.20);
+            cursor: pointer;
+        }
+        .container2 #corvermelho:hover{
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px red;
+        }
+        .container2 #corverde:hover{
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px rgb(1, 255, 1);
+        }
+        .container2 #corazul:hover{
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px rgb(36, 36, 255);
+        }
+        .container2 #cordosite:hover{
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px cyan;
+        }
+        .vermelho{
+            background-image: none;
+            background-color: red;
+            transition: 1s ease-in-out;
+        }
+        .verde{
+            background-image: none;
+            background-color: green;
+            transition: 1s ease-in-out;
+        }
+        .azul{
+            background-image: none;
+            background-color: blue;
+            transition: 1s ease-in-out;
+        }
+        .cordosite{
+            background-image: linear-gradient(to right cyan, blue, darkblue);
+            background-color: none;
+            transition: 1s ease-in-out;
+        }
+        @media (min-width:300px) and (max-width:800px){
+            .container1{
+                margin: 30px auto;
+                width: 350px;
+            }
+            .container1 .box1{
+                font-size: 14px;
+            }
+            .container2{
+                flex-direction: column;
+                margin: 150px auto;
+                align-items: center;
+            }
+            .container2 #corvermelho, #corverde, #corazul, #cordosite{
+              margin: 15px auto;
+              font-size: 20px;
+              width: 300px;
+            }
+            .container2 #corvermelho:hover, #corverde:hover, #corazul:hover, #cordosite:hover{
+            transform: scale(1.10);
+            cursor: pointer;
+        }
+        }
+    </style>
+</head>
+<body>
+    <a href="http://gamesdojaum.github.io/Shoto/projetos.html"><h1 class="voltar">&lArr; VOLTAR PARA O SITE</h1></a>
+    <div class="container1">
+        <div class="box1">
+            <h1>Mudar Background (RGB)</h1>
+        </div>
+    </div>
+
+    <div class="container2">
+        <button class="vermelho" id="corvermelho">
+          <h1>RED</h1>
+        </button> 
+    
+
+        <button class="verde" id="corverde">
+           <h1>GREEN</h1>
+        </button>
+        
+
+        <button class="azul" id="corazul">
+            <h1>BLUE</h1>
+        </button>
+        
+        <button class="cordosite" id="cordosite">
+            <h1>COR DO SITE</h1>
+        </button>
+
+    </div>
+
+
+
+    <script>
+        document.getElementById("corvermelho").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class", "vermelho");
+        })
+
+        document.getElementById("corverde").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class", "verde");
+        })
+
+        document.getElementById("corazul").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class", "azul");
+        })
+
+        document.getElementById("cordosite").addEventListener("click", function(){
+            document.querySelector("body").setAttribute("class", "cordosite");
+        })
+    </script>
+
+</body>
+</html>
